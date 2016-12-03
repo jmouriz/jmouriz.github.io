@@ -1,0 +1,62 @@
+<!doctype html>
+<html style="overflow-y: auto;">
+   <head>
+      <base href="../../resources">
+      <meta charset="utf-8" />
+      <title>Sistemas Integrados de Parquímetros S.R.L.</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1,
+                                     maximum-scale=1,user-scalable=no" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <!-- <link rel="manifest" href="manifest.json" /> -->
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="application-name" content="SIP Móvil" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="SIP Móvil" />
+      <meta name="msapplication-TileImage"
+            content="images/ms-touch-icon-144x144-precomposed.png" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="HandheldFriendly" content="true" />
+      <meta name="MobileOptimized" content="width" />
+      <link rel="apple-touch-icon" sizes="72x72"
+            href="images/apple-touch-icon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="114x114"
+            href="images/apple-touch-icon-114x114.png" />
+      <link rel="apple-touch-icon"
+            href="images/apple-touch-icon.png" />
+      <link rel="icon" sizes="192x192"
+            href="images/chrome-touch-icon-192x192.png" />
+      <!--
+      <link rel="apple-touch-startup-image"
+            href="images/splash-startup.png" />
+      -->
+      <link rel="stylesheet" href="styles/fonts.css" />
+      <link rel="stylesheet" href="styles/fontawesome.css" />
+      <link rel="stylesheet" href="styles/w3.css" />
+      <link rel="stylesheet" href="styles/styles.css" />
+
+      <link rel="stylesheet" href="styles/themes/red.css" />
+
+      <!-- script src="scripts/script.js"></script -->
+      <script src="scripts/widget.js"></script>
+
+      <script src="widgets/menu/widget.js"></script>
+   </head>
+
+   <body class="w3-theme-light">
+      <widget name="menu.shadow"></widget>
+      <nav style="display: none;" class="w3-sidenav w3-collapse w3-white w3-animate-left" id="drawer">
+         <div class="w3-top w3-display-container w3-theme menu-title">
+            <span class="w3-xxlarge logo title">[[title]]</span>
+            <i class="w3-hide-large w3-xlarge w3-display-right w3-closenav fa fa-[[close-icon]] close-button" onclick="menuClose()"></i>
+         </div>
+         <div id="user" role="!unknown" class="w3-theme w3-padding w3-animate-top" style="min-height:64px;margin-top:64px;margin-bottom:-64px">
+            <i style="line-height:48px;width: 216px;text-overflow: ellipsis;white-space: nowrap;position: absolute;overflow: hidden;" id="user">¡Bienvenido!</i>
+         </div>
+         <div class="menu">
+            <content></content>
+         </div>
+      </nav>
+   </body>
+</html>

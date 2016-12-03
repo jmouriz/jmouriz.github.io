@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto.ttf') format('truetype');
+  /*
+  src: url('../fonts/roboto.eot');
+  src: url('../fonts/roboto-ie.eot') format('embedded-opentype'),
+  url('../fonts/roboto.woff2') format('woff2'),
+  url('../fonts/roboto.woff') format('woff'),
+  url('../fonts/roboto.ttf') format('truetype');
+  url('../fonts/roboto.svg') format('svg');
+  */
+}
+
+@font-face {
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fredokaone.ttf') format('truetype');
+  /*
+  src: local('Fredoka One'),
+       local('FredokaOne-Regular'),
+       url('../fonts/fredokaone.ttf') format('truetype');
+  src: url('../fonts/fredokaone.eot');
+  src: url('../fonts/fredokaone-ie.eot') format('embedded-opentype'),
+  url('../fonts/fredokaone.woff2') format('woff2'),
+  url('../fonts/fredokaone.woff') format('woff'),
+  url('../fonts/fredokaone.ttf') format('truetype');
+  url('../fonts/fredokaone.svg') format('svg');
+  */
+}
+
+
+*:not(.fa) {
+  font-family: 'Roboto';
+}
+
+.logo {
+  font-family: 'Fredoka One', cursive;
+}
