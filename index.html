@@ -68,13 +68,28 @@
       </widget>
       <widget name="menu">
          <header>
-            <title>jmouriz.io</title> <close-icon>close</close-icon>
+            <title>jmouriz</title> <close-icon>close</close-icon>
             <welcome>¡Bienvenido!</welcome>
          </header>
          <content>
             <widget name="menu.item" id="home">Inicio</widget>
-            <widget name="menu.item" id="projects">Mis proyectos</widget>
-            <widget name="menu.item" id="ideas">Mis locuras</widget>
+            <widget name="menu.submenu">
+               <label>Desarrollos</label>
+               <content>
+                  <widget name="menu.item" id="libusockets">libusockets</widget>
+                  <widget name="menu.item" id="gpstree">gpstree</widget>
+                  <widget name="menu.item" id="union-boxes">Union Boxes</widget>
+                  <widget name="menu.item" id="egg-player">EggPlayer</widget>
+                  <widget name="menu.item" id="visual-gtk">Visual GTK+</widget>
+                  <widget name="menu.item" id="clutter-coverflow">Clutter Coverflow</widget>
+                  <widget name="menu.item" id="shpc">Shell Compiler</widget>
+                  <widget name="menu.item" id="sanaviron">Sanaviron</widget>
+                  <widget name="menu.item" id="mof">MOF</widget>
+                  <widget name="menu.item" id="mount-vdi">Mount VDI</widget>
+                  <widget name="menu.item" id="more">Más desarrollos</widget>
+               </content>
+            </widget>
+            <widget name="menu.item" id="ideas">Ideas</widget>
             <widget name="menu.item" id="preferences">Preferencias</widget>
             <widget name="menu.item" id="contact">Contacto</widget>
          </content>
@@ -84,25 +99,222 @@
             <widget name="page" id="home">
                <title>Inicio</title>
                <content>
-                  <p>No tengo nada que decir aquí</p>
+               <p>Mi nombre es Juan Manuel esta es mi página personal en <i>GitHub</i>. Un sitio donde guardo algunas de las piezas que voy escribiendo cuando me aburro. No me especializo en ningún lenguaje, la mayoría de los desarrollos están escritos en C pero también encontrarás códigos en Python, PHP, JavaScript y Shell Script</p>
+               <p>Soy desarrollador de software. Mi carrera se basa es la acumulación de horas de práctica, extensas lecturas, investigaciones, pruebas, noches sin dormir y mucha cafeína que suman un total de 24 años haciendo lo mismo y con el mismo entusiasmo. Desde mi primera computadora, que en verdad no era mía ;-) descubrí mi verdadero amor que más tarde se transformó en una pasión.</p>
+               <p>Entre todos mis proyectos, se encuentra este sitio que guarda algunos secretos y es el resultado de un experimento de laboratorio que estoy desarrollando en la medida que el tiempo me lo permite. Encontrarás más información al respecto en la sección de ideas.</p>
                </content>
             </widget>
-            <widget name="page" id="projects">
-               <title>Mis proyectos</title>
+
+            <widget name="page" id="libusockets">
+               <title>libusockets</title>
                <content>
-                  <p>Lo siento, aún estoy en modo pasivo con la producción de ideas para completar esta sección.</p>
+                  <p><a href="https://github.com/jmouriz/libusockets">https://github.com/jmouriz/libusockets</a></p>
+                  <p>libusockets es una pequeña biblioteca de funciones para manejar sockets de Internet en Unix que permite:</p>
+                  <ul class="w3-leftbar w3-border-theme item-list">
+                     <li>Crear sockets de Internet.</li>
+                     <li>Asignar nombres a sockets (bind).</li>
+                     <li>Escuchar clientes (listen).</li>
+                     <li>Servir a clientes (bind y listen).</li>
+                     <li>Aceptar clientes (accept).</li>
+                     <li>Conectarse con servidores (connect).</li>
+                     <li>Enviar y recibir entre pares (send y recv).</li>
+                     <li>Apagar y cerrar conexiones (shutdown y close).</li>
+                  </ul>
+                  <p>Básicamente funciona como envoltura a la familia de funciones para manejar sockets de Internet en Unix. Cuenta con un sistema rudimentario de manejo de errores.</p>
+                  <p>Compila con C y C++ y es altamente portable. Útil para encapsular en una clase de C++. Agregar las funciones de manejo de sockets de Windows (<i>winsocks</i>). Compilar en Android. O hacer una biblioteca de comunicación portable e insegura.</p>
                </content>
             </widget>
+
+            <widget name="page" id="gpstree">
+               <title>gpstree</title>
+               <content>
+                  <p><a href="https://github.com/jmouriz/gpstree">https://github.com/jmouriz/gpstree</a></p>
+                  <p>gpstree es una herramienta para mostrar gráficamente el árbol de procesos de Unix como lo hace el comando <i>ps</i>.</p>
+                  <p>Su nombre comienza con G porque está enlazada con <i>GTK+</i> y es un ejemplo de cómo usar algunas características semi avanzadas de <i>GLib</i>, como expresiones regulares y ejecución de procesos asíncronos usando tuberías.</p>
+                  <p>Está escrito en C y es un buen medio de aprendizaje para escribir interfaces gráficas de usuario para comandos de consola.</li>
+                  <img src="images/screenshots/gpstree.png">
+               </content>
+            </widget>
+
+            <widget name="page" id="union-boxes">
+               <title>Union Boxes</title>
+               <content>
+                  <p><a href="https://github.com/jmouriz/union-boxes">https://github.com/jmouriz/union-boxes</a></p>
+                  <p>Union Boxes es un programa interactivo que une dos rectángulos por el lado más conveniente mediante una curva cúbica de Bézier.</p>
+                  <p>Es una pieza didáctica que pretende mostrar cierto lineamiento para escribir código bueno en C sin extrañar las características que nos ofrece la programación orientada a objetos.</p>
+                  <p>Asimismo es útil para implementar en tu canvas si estás desarrollando algún programa para dibujar diagramas. El algoritmo es claro, fácil de entender y escribir en otros lenguajes, por ejemplo <i>JavaScript</i>. Utiliza las primitivas de dibujo que ofrece <i>Cairo</i> y una pequeña porción de <i>GTK+</i> para crear la ventana y el widget que representa el canvas.</p>
+                  <img src="images/screenshots/union-boxes-1.png">
+                  <img src="images/screenshots/union-boxes-2.png">
+                  <img src="images/screenshots/union-boxes-3.png">
+               </content>
+            </widget>
+
+            <widget name="page" id="egg-player">
+               <title>EggPlayer</title>
+               <content>
+                  <p><a href="https://github.com/jmouriz/egg-player">https://github.com/jmouriz/egg-player</a></p>
+                  <p>EggPlayer es un reproductor de video para tus aplicaciones <i>GTK+</i>. Un objeto que reproduce videos. Implementa el mecanismo de objetos de <i>GObject</i> y está escrito en C. Se enlaza con <i>GTK+</i> y <i>GStreamer</i> para generar una biblioteca dinámicamente enlazable <i>.dll</i> u objeto compartido <i>.so</i>. Esta biblioteca <i>libegg.(dll|so)</i> se puede cargar en el diseñador de interfaces gráficas de usuario <i>Glade</i>. Es un intento de comprender la técnica de incorporación de nuevos widgets a la paleta de <i>Glade</i> y aporta un nuevo ejemplo al objeto <i>EggClockFace</i> de <u>Davyd Madeley</u> con el agregado de una propiedad que se puede manejar cambiar desde <i>Glade</i>.</p>
+                  <img src="images/screenshots/egg-player.png">
+               </content>
+            </widget>
+
+            <widget name="page" id="visual-gtk">
+               <title>Visual GTK+</title>
+               <content>
+                  <p><a href="https://github.com/jmouriz/visual-gtk">https://github.com/jmouriz/visual-gtk</a></p>
+                  <p>Visual GTK+ es un plugin para <i>Glade</i> que incluye un hack del objeto <i>GtkBuilderScript</i> de <u>Christian Hergert</u> y permite editar el código <i>JavaScript</i> directamente en <i>Glade</i>.</p>
+                  <img src="images/screenshots/visual-gtk.png">
+
+                  <h4>Del README original de Christian</h4>
+                  <p>GtkBuilder + Inline JavaScript.</p>
+                  <p>This is a quick hack to allow writing javascript inside of a GtkBuilder xml file and attaching signals to said javascript functions.</p>
+                  <p>GScriptJs is an object that can be created from within the GtkBuilder file. The "script" property is used to eval javascript into the JSContext.</p>
+                  <p>Use a connect callback similar to connect_func in script.c.</p>
+                  <p>Cheers, and Happy Hacking,</p>
+
+                  <h4>Ejemplos</h4>
+
+                  <h5>Una calculadora</h5>
+                  <a href="https://github.com/jmouriz/visual-gtk/blob/master/examples/calculator/calculator.ui">Ver código</a>
+                  <img src="images/screenshots/visual-gtk-calculator.png">
+
+                  <h5>Un libro telefónico</h5>
+                  <a href="https://github.com/jmouriz/visual-gtk/blob/master/examples/phonebook/phonebook.ui">Ver código</a>
+                  <img src="images/screenshots/visual-gtk-phonebook.png">
+
+                  <h5>Un afinador de guitarra</h5>
+                  <a href="https://github.com/jmouriz/visual-gtk/blob/master/examples/tuner/tuner.ui">Ver código</a>
+                  <img src="images/screenshots/visual-gtk-tuner.png">
+
+                  <h5>Un visor de imágenes</h5>
+                  <a href="https://github.com/jmouriz/visual-gtk/blob/master/examples/viewer/viewer.ui">Ver código</a>
+                  <img src="images/screenshots/visual-gtk-viewer.png">
+               </content>
+            </widget>
+
+            <widget name="page" id="clutter-coverflow">
+               <title>Clutter Coverflow</title>
+               <content>
+                  <p><a href="https://github.com/jmouriz/clutter-coverflow">https://github.com/jmouriz/clutter-coverflow</a></p>
+                  <p>Clutter Coverflow es deslizador de portadas CD's al estilo fonola escrito en C usando la biblioteca Clutter. Altamente portable y útil para implementar en reproductores de música. Debido a las transiciones de Clutter, parecidas a las transiciones de propiedades de estilos de CSS se puede traducir para usar en la web.</p>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/v2IiP1AEolc" frameborder="0" allowfullscreen></iframe>
+               </content>
+            </widget>
+
+            <widget name="page" id="shpc">
+               <title>Shell Compiler</title>
+               <content>
+                  <p><a href="https://github.com/jmouriz/shpc">https://github.com/jmouriz/shpc</a></p>
+                  <p>Shell Compiler (shpc, de Sheel Pseudo Compiler) es un pseudo compilador de <i>Shell Script</i> que te permite transformar tus <i>scripts</i> en un programa compilado (léase erróneamente binario).</p>
+                  <p>shpc convierte un <i>script</i> a código C intermedio y luego lo compila y enlaza para generar un programa en código nativo. De esta forma puedes ocultar parcialmente y de manera poco efectiva el algoritmo. Es útil cuando la demanda de seguridad no es demasiado estricta.</p>
+                  <p>Sirve como ejemplo de uso de algunas características básicas de C como <i>getopt</i>, <i>errno</i>, entre otras.</p>
+                  <p>Al mismo tiempo el código C intermedio escribe un archivo con el <i>script</i> original, lo ejecuta y luego lo borra. Esto hace que el <i>script</i> se ejecute tal y como se espera, pero a su vez, puede quedar el código generado si el programa se interrumpe en el momento adecuado, lo que lo hace inseguro en requerimientos de seguridad estrictos. Por otra parte el <i>script</i> se incluye como una cadena de C que se oculta del programa compilado haciendo un pequeño desplazamiento de bytes para que la cadena no quede visible. Conociendo esto, se puede descompilar cualquier código haciendo el proceso inverso.</p>
+               </content>
+            </widget>
+
+            <widget name="page" id="sanaviron">
+               <title>Sanaviron</title>
+               <content>
+                  <p><a href="https://github.com/jmouriz/sanaviron">https://github.com/jmouriz/sanaviron</a></p>
+                  <p>Sanaviron es un programa de dibujo 2D escrito enteramente en <i>Python</i> para representar gráficos vectoriales- Es escencialmente un canvas basado en </i>Cairo</i> y un conjunto de herramientas que usan <i>GTK+</i> que van alrededor y permiten editar el contenido del canvas. El esfuerzo se focaliza principalmente en el diseño de facturas, presupuestos, etiquetas y cualquier otro tipo de documentos comerciales. Sanaviron ofrece un API simple pero potente que puedes implementar en tus programas. Este widget puede ser usado de manera flexible para mostrar y editar interactivamente graficos vectoriales. Sanaviron es un componente que depende de <i>GTK+</i> y <i>Cairo</i>, por eso es portable a muchas plataformas. Originalmente 100% escrito en <i>Python</i> puro. Debido a las bibliotecas que utiliza, puede ser traducido de manera más o menos sencilla a C usando <i>GObject</i> y es más fácil de traducir a C++. Algunos añadidos posteriores se escribieron en C, por ejemplo, la interfaz para dibujar códigos de barras y un pequeño código para determinar la posición del cursor en cadenas UTF-8. Ambos códigos son portables y en el repositorio se incluyen los archivos compilados para Unix <i>.so</i> de 32 y 64 bites respectivamente y los archivos <i>.dll</i> para Windows también para procesadores de 32 y 64 bits.</p>
+                  <h3>Algunas características que se pueden remarcars son:</h3>
+                  <ul class="w3-leftbar w3-border-theme item-list">
+                     <li>Dibujo del papel y márgenes.</li>
+                     <li>Rejilla de referencia.</li>
+                     <li>Salto sobre rejilla (rejilla magnética o pegadiza).</li>
+                     <li>Movimiento de objetos.</li>
+                     <li>Selección de múltiples objetos.</li>
+                     <li>Movimiento de múltiples objetos.</li>
+                     <li>Redimensionamiento de objetos usando 8 puntos, 4 cardinales y 4 diagonales.</li>
+                     <li>Deformación de objetos usando puntos de control específicos.</li>
+                     <li>Creación de nuevos objetos y extensión de existentes de manera simple.</li>
+                     <li>Buen abuso de objetos.</li>
+                     <li>Conceptos geométricos fáciles de entender.</li>
+                     <li>Soporte de código de barras (esta característica requiere compilar algunas piezas escritas en C).</li>
+                     <li>Gráficos estadísticos basados en <i>PyCha</i> (barras horizontales, verticales y apiladas, circulares, líneas y puntos).</li>
+                     <li>Capacidad de exportar a <i>PDF</i> y <i>PNG</i>.</li>
+                     <li>Soporte reciente y experimental de <i>Python 3.x</i> y <i>GTK+ 3.x</i>.</li>
+                     <li>Soporta internalización para traducir a múltiples idiomas, actualmente en inglés, español y ruso (gracias a <u>Denis Ivlev</u>).
+                  </ul>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Mn9KQ0A8FJc" frameborder="0" allowfullscreen></iframe>
+               </content>
+            </widget>
+
+            <widget name="page" id="mof">
+               <title>MOF</title>
+               <content>
+                  <p><a href="https://github.com/jmouriz/mof">https://github.com/jmouriz/mof</a></p>
+                  <p>MOF significa Mockup Outside Framework (Maqueta Fuera del Marco de Trabajo) y es un pequeño archivo <i>PHP</i> (~3,7Kb) para que incluyas en tus proyectos en la etapa de fabricación de la maqueta. Incluye algunas funciones básicas que serán de utilidad para:</p>
+                  <ul class="w3-leftbar w3-border-theme item-list">
+                     <li>Cifrar y comparar contraseñas cifradas de forma más o menos segura (password).</li>
+                     <li>Escribir y leer estructuras de datos complejas en archivos (store/restore).</li>
+                     <li>Iniciar y cerrar sesión (login/logout).</li>
+                     <li>Verificar si un usuario está autorizado (logged).</li>
+                     <li>Proteger las páginas con acceso restringido (protect).</li>
+                     <li>Leer datos suministrados por el usuario sea por <i>GET</i> o <i>POST</i> (input).</li>
+                     <li>Contestar pedidos con datos en notación <i>JSON</i> (json).</li>
+                     <li>Contestar pedidos con estilos <i>CSS</i> (css).</li>
+                     <li>Leer archivos especificando un contenido de contingencia (read).</li>
+                     <li>Redireccionar (redirect).</li>
+                  </ul>
+                  <p>MOF contiene una serie de funciones mínimas de jugete útiles especialmente para hacer bosquejos de nuevas funcionalidades sin lidiar con bases de datos, modelos y sentencias <i>SQL</i> y olvidarse de las sesiones. Se puede usar dentro o fuera de un marco de trabajo aunque fuera del marco de trabajo se refiere a que no debe ser usado en producción. Consume malas prácticas en favor de prestar una funcionalidad sencilla al programador para la confección de bosquejos de código útiles para maquetar controladores o contestar pedidos de la interfaz frontal.</p>
+               </content>
+            </widget>
+
+            <widget name="page" id="mount-vdi">
+               <title>Mount VDI</title>
+               <content>
+                  <p><a href="https://raw.githubusercontent.com/jmouriz/shpc/master/tests/mount-vdi.bash">https://raw.githubusercontent.com/jmouriz/shpc/master/tests/mount-vdi.bash</a></p>
+                  <p>Mount VDI es un montador de imágenes de disco <i>VDI</i> de <i>VirtualBox</i> escrito en <i>Bash</i>. Permite convertir las imágenes de tamaño variable en tamaño fijo para poder montarlas. Aparte de su funcionalidad sirve como ejemplo para aprender a escribir <i>Shell Scripts</i> de calidad.</p>
+               </content>
+            </widget>
+
+            <widget name="page" id="more">
+               <title>Más desarrollos</title>
+               <content>
+                  <p>En <a href="https://github.com/jmouriz?tab=repositories">https://github.com/jmouriz</a> encontrarás mi perfil completo con todos los repositorios.</p>
+               </content>
+            </widget>
+
+
             <widget name="page" id="ideas">
-               <title>Mis locuras</title>
+               <title>Ideas</title>
                <content>
-                  <p>Entiéndase el título como <i>mis ideas</i>, que por supuesto, rozan la locura. Aún estoy en modo pasivo con la producción de ideas para completar esta sección.</p>
+                  <h3>Web Widgets</h3>
+                  <a href="https://github.com/jmouriz/jmouriz.github.io">https://github.com/jmouriz/jmouriz.github.io</a>
+                  <p>Las ideas son para mí la segunda razón de la locura. Éstas afectan mi producción a medida que aumentan y me atormentan. Por eso no puedo producirlas a todas. Concretar una obra lleva tiempo y esfuerzo. Así que sólo me voy a focalizar en la más reciente y actualmente activa.</p>
+                  <p>Como mencioné en el inicio, este sitio esconde algunos secretos y es el resultado de un experimento de laboratorio que estoy desarrollando en la medida que el tiempo me lo permite. Para los más ansiosos, pueden ver el código fuente de esta página para que se hagan una idea de qué se trata. El concepto está inspirado en <a href="https://www.polymer-project.org">Polymer</a>, un proyecto que pretende ayudar a la construcción de componentes reutilizables en aplicaciones web híbridas. A partir de la edición 2015 de <i>ECMAScript</i> encuentro que <i>JavaScript</i> finalmente tiene un nivel más que aceptable a la hora de desarrollar aplicaciones. Estos condimentos, que se fueron gestando con el correr de los años, me empujaron a desarrollar el concepto de este sitio. Debajo del capó, es una simple página compuesta por varios componentes reutilizables. A estos componentes se les llama widgets.</p>
+                  <p>Para resumir, este sitio está compuesto por un conjunto de widgets reutilizables en la construcción de aplicaciones híbridas, sean web, móviles o de escritorio. Cada widget es una página definida en lenguaje HTML con su definición completa, es decir, encabezado, estilos y código <i>JavaScript</i>. De forma tal que funcionan de manera independiente o en conjunto dentro de una aplicación. Al mismo tiempo cada widget incluye estilos propios seleccionados por clase donde cada selector pertenece a un espacio de nombres privado independiente del resto. Esto significa que los estilos no se mezclan entre widgets aún siendo de la misma clase a menos que se definan globalmente para todo el sitio.</p>
+                  <p>Con esta idea pretendo desarrollar aplicaciones un minutos para aumentar la producción logrando un nivel de prolijidad y estilo de código que se pueda describir como impecable a la hora de desarrollar aplicaciones profesionales.</p>
+                  <p>En el transcurso de estos meses iré trabajando para atar algunos cabos y lograr la primera versión 100% funcional. Aún no existe un repositorio formal de fuentes. Invito a los más ansiosos a bajar esta página si quieren investigar más al respecto para desarrollar, dar forma y aportar más ideas al concepto.</p>
+                  <p>Si estás interesado en producir aplicaciones híbridas, dejo algunos enlaces para comenzar:</p>
+                  <ul class="w3-leftbar w3-border-theme item-list">
+                     <li>Electron: <a href="http://electron.atom.io/">http://electron.atom.io</a></li>
+                     <li>Apache Cordova: <a href="https://cordova.apache.org/">https://cordova.apache.org</a></li>
+                     <li>Crosswalk Project: <a href="https://crosswalk-project.org/">https://crosswalk-project.org</a>
+                  </ul>
+                  <p>Lamentablemente no todo es color de rosas y una aplicación híbrida no es la excepción. Claramente existen pros y contras a considerar en el momento de decidir el camino a tomar en un desarrollo. Entre éstos, puedo destacar:</p>
+                  <h4>Contras</h4>
+                  <ul class="w3-leftbar w3-border-theme item-list">
+                     <li>Una aplicación híbrida ocupa más espacio que una nativa de las mismas características. Que sea portable implica incluir componentes comunes que generalmente reemplazan componentes propios del sistema operativo donde se va a ejecutar.</li>
+                     <li>Son mucho más lentas. Y si bien en este punto me gustaría decir que son ligeramente más lentas, tengo que admitir que el consumo de recursos es mucho mayor y requieren de hardware más costoso.</li>
+                     <li>La producción inicial es mucho más costosa. Y como regla, la producción es siempre más que el doble de costosa que una aplicación nativa. No mismo compilar uno o varios archivos fuentes y enlazarlos con las bibliotecas provistas por el sistema operativo que compilar y enlazar varios archivos fuentes para generar una aplicación mucho mayor que a su vez va a ejecutar la aplicación final que se va a distribuir.</li>
+                  </ul>
+                  <h4>Pros</h4>
+                  <ul class="w3-leftbar w3-border-theme item-list">
+                     <li>Una aplicación híbrida es portable de manera casi transparente a múltiples plataformas. Se programa una vez y se producen binarios para todas las plataformas. Los enlaces que suministré anteriormente permiten a una aplicación híbrida generar paquetes para Android, iOS, Windows Mobile, Microsoft Windows, Linux y MacOS. Y esta es una de las más grandes ventajas que podemos encontrar en una aplicación de este tipo.</li>
+                     <li>Del punto anterior podemos concluir que se necesita un lenguaje único, en este caso <i>JavaScript</i> y por supuesto HTML. No es necesario conocer lenguajes propietarios o incurrir a una multiplicidad de idiomas. En ejecto, si quisiéramos desarrollar una aplicación para Android, tendríamos que escribirla en <i>Java</i>, para iOS o MacOS en <i>Objective-C</i>, para Linux y Windows en C o C++, incluso aquí si bien es el mismo lenguaje las bibliotecas son completamente diferentes con lo cual se escribe la misma aplicación casi dos veces para que funcione en ambos sistemas.</li>
+                  </ul>
                </content>
             </widget>
             <widget name="page" id="contact">
                <title>Contacto</title>
                <content>
-                  <p>No es buena idea publicarla aquí, pero a mi correo electrónico <a href="mailto:jmouriz@gmail.com">jmouriz@gmail.com</a> puedes escribirme.</p>
+                  <p>
+                  Juan Manuel Mouriz &lt;<a href="mailto:jmouriz@gmail.com">jmouriz@gmail.com</a>&gt;<br />
+                  Desarrollador de software.<br />
+                  Teléfono: 15-4085-4863
+                  </p>
                </content>
             </widget>
             <widget name="preferences"></widget>
