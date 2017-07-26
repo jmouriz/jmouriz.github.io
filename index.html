@@ -76,6 +76,7 @@
             <widget name="menu.submenu">
                <label>Desarrollos</label>
                <content>
+                  <widget name="menu.item" id="authentificallizer">authentificallizer</widget>
                   <widget name="menu.item" id="libusockets">libusockets</widget>
                   <widget name="menu.item" id="gpstree">gpstree</widget>
                   <widget name="menu.item" id="union-boxes">Union Boxes</widget>
@@ -102,6 +103,60 @@
                <p>Hola, esta es mi página personal en <i>GitHub</i>. Un sitio donde guardo algunas de las piezas que voy escribiendo cuando me aburro. Me gusta programar pero no me especializo en ningún lenguaje, la mayoría de los desarrollos están escritos en C aunque aquí encontrarás también códigos en <i>Python</i>, <i>PHP</i>, <i>JavaScript</i> y <i>Shell Script</i>.</p>
                <p>Mi carrera se basa es la acumulación de horas de práctica, extensas lecturas, investigaciones, pruebas, noches sin dormir y mucha cafeína que suman un total de 24 años haciendo lo mismo y con el mismo entusiasmo. Desde mi primer contacto con una computadora descubrí el verdadero amor que más tarde se transformó en pasión.</p>
                <p>Entre todos mis proyectos, se encuentra este sitio que guarda algunos secretos y es el resultado de un experimento de laboratorio que estoy desarrollando en la actualidad en la medida que el tiempo me lo permite. Encontrarás más información al respecto en la sección de ideas.</p>
+               </content>
+            </widget>
+
+            <widget name="page" id="authentificallizer">
+               <title>authentificallizer</title>
+               <content>
+                  <p><a href="https://jmouriz.github.io/authentificallizer">https://jmouriz.github.io/authentificallizer</a></p>
+                  <p>Este repositorio contiene un ejemplo completo y funcional de cómo usar <a href="https://github.com/sahat/satellizer">Satellizer</a> para iniciar sesión usando un servidor local OAuth 2.0 (<a href="https://tools.ietf.org/html/rfc6749">RFC 6749: The OAuth 2.0 Authorization Framework</a>) y diversos proveedores externos en tu sitio. Incluye el código del lado del servidor para enlazar con tus usuarios y un servidor OAuth 2.0 propio que soporta múltiples <code>scopes</code> (<a href="https://tools.ietf.org/html/rfc6749#section-3.3">RFC 6749: The OAuth 2.0 Authorization Framework, 3.3. Access Token Scope</a>).</p>
+
+                  <h2>Pantallazos</h2>
+                  <p class="w3-center"><img src="images/screenshots/authentificallizer-1.png" style="max-width:75%;"></p>
+                  <p class="w3-center"><img src="images/screenshots/authentificallizer-2.png" style="max-width:75%;"></p>
+                  <p class="w3-center"><img src="images/screenshots/authentificallizer-3.png" style="max-width:75%;"></p>
+                  <p class="w3-center"><img src="images/screenshots/authentificallizer-4.png" style="max-width:75%;"></p>
+                  <p class="w3-center"><img src="images/screenshots/authentificallizer-5.png" style="max-width:75%;"></p>
+                  <p class="w3-center"><img src="images/screenshots/authentificallizer-6.png" style="max-width:75%;"></p>
+
+                  <h2>Usuarios</h2>
+                  <p>Los usuarios se encuentran en la tabla <code>oauth_users</code> definida en <code>database/schema.sql</code>. Puedes ampliarla a tu gusto pero no modifiques los campos existentes porque es usada internamente por la biblioteca <a href="https://github.com/bshaffer/oauth2-server-php">oauth2-server-php</a> para el <code>grant_type</code> <code>password</code> (<a href="https://tools.ietf.org/html/rfc6749#section-1.3.3">RFC 6749: The OAuth 2.0 Authorization Framework, 1.3.3. Resource Owner Password Credentials</a>). Las llamadas SQL se encuentran en <code>authorization/model/user.php</code> que es una clase que extiende un pequeño ORM muy simple que está en <code>authorization/common/model.php</code>.</p>
+
+                  <h2><span aria-hidden="true" class="octicon octicon-link"></span></a>Importante</h2>
+                  <p>Leé el instructivo hasta el final y sólo prueba cuando hayas terminado de configurar los proveedores que vas a utilizar para evitarte dolores de cabeza. Asegúrate de configurar correctamente todas las URL de redirección.</p>
+                  <p>Yahoo no soporta <code>localhost</code> y tampoco permite múltiples URLs de redireccionamiento con lo cual deberás crear dos aplicaciones, una para producción y otra para desarrollo usando la dirección <code>127.0.0.1</code> en lugar del nombre <code>localhost</code>. Asegúrate de usar siempre el protocolo cifrado HTTPS.</p>
+
+                  <h2>Requerimientos previos</h2>
+                  <ol>
+                     <li>bower</li>
+                     <li>composer</li>
+                  </ol>
+
+                  <h2>Dependencias adicionales</h2>
+                  <p>PHP debe soportar la extensión PDO.</p>
+
+                  <h2>Instalación</h2>
+                  <pre>
+                     <code>
+                        bower install
+                        cd authorization/libraries
+                        composer install
+                     </code>
+                  </pre>
+
+                  <h2>Configuración</h2>
+                  <ol>
+                     <li>Copia <code>authorization/common/config-template.php</code> a <code>authorization/common/config.php</code> y edita este último con los valores de configuración para cada proveedor y los datos de acceso a tú base de datos.</li>
+                     <li>Ve a la dirección <code>http://localhost/authentificallizer/setup.php</code> para crear el esquema de tablas en la base de datos y configura la URL de redirección en cada proveedor.</li>
+                  </ol>
+
+                  <h2>Pendientes</h2>
+                  <ol>
+                     <li>Agregar más proveedores.</li>
+                     <li>Permitir la instalación del lado del servidor con Composer.</li>
+                     <li>Hacer un módulo para AngularJS y permitir la instalación del lado del cliente con Bower o NPM.</li>
+                  </ol>
                </content>
             </widget>
 
@@ -243,7 +298,7 @@
             <widget name="page" id="mof">
                <title>MOF</title>
                <content>
-                  <p><a href="https://github.com/jmouriz/mof">https://github.com/jmouriz/mof</a></p>
+                  <p><a href="https://jmouriz.github.io/mof">https://jmouriz.github.io/mof</a></p>
                   <p>MOF significa Mockup Outside Framework (Maqueta Fuera del Marco de Trabajo) y es un pequeño archivo <i>PHP</i> (~3,7Kb) para que incluyas en tus proyectos en la etapa de fabricación de la maqueta. Incluye algunas funciones básicas que serán de utilidad para:</p>
                   <ul class="w3-leftbar w3-border-theme item-list">
                      <li>Cifrar y comparar contraseñas cifradas de forma más o menos segura (password).</li>

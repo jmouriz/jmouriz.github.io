@@ -4,6 +4,10 @@
    user-select: none;
 }
 
+a {
+   cursor: pointer;
+}
+
 body {
    min-width: 280px;
    -webkit-user-select: none;
