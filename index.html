@@ -87,6 +87,7 @@
                   <widget name="menu.item" id="sanaviron">Sanaviron</widget>
                   <widget name="menu.item" id="mof">MOF</widget>
                   <widget name="menu.item" id="mount-vdi">Mount VDI</widget>
+                  <widget name="menu.item" id="dia-to-sql">dia-to-sql</widget>
                   <widget name="menu.item" id="more">Más desarrollos</widget>
                </content>
             </widget>
@@ -321,6 +322,19 @@
                <content>
                   <p><a href="https://raw.githubusercontent.com/jmouriz/shpc/master/tests/mount-vdi.bash">https://raw.githubusercontent.com/jmouriz/shpc/master/tests/mount-vdi.bash</a></p>
                   <p>Mount VDI es un montador de imágenes de disco <i>VDI</i> de <i>VirtualBox</i> escrito en <i>Bash</i>. Permite convertir las imágenes de tamaño variable en tamaño fijo para poder montarlas. Aparte de su funcionalidad sirve como ejemplo para aprender a escribir <i>Shell Scripts</i> de calidad.</p>
+               </content>
+            </widget>
+
+            <widget name="page" id="dia-to-sql">
+               <title>dia-to-sql</title>
+               <content>
+                  <p><a href="https://jmouriz.github.io/dia-to-sql">https://jmouriz.github.io/dia-to-sql</a></p>
+                  <p>dia-to-sql es un pequeño código escrito en Perl que convierte un diagrama de dabe de datos (ER) de DIA a SQL. Está basado en el módulo de Perl <a href="http://annocpan.org/dist/Parse-Dia-SQL">Parse::DIA::SQL</a> pero no lo usa. A diferencia de éste, dia-to-sql agrega la característica de reconocer las líneas de relaciones entre tablas calculando por aproximaxión a qué columnas se refieren. No encontré hasta hoy alguna herramienta que lo haga ya que las relaciones de los diagramas de base de datos de día no incluyen datos acerca de qué columnas relacionan sino que conectan las tablas por puntos de conexión preestablecidos en el borde la de caja que contiene la tabla. dia-to-sql intenta calcular por aproximación a qué columna relaciona según qué punto de unión se use.
+                  <p>dia-to-sql intenta convertir esto:</p>
+                  <p class="w3-center"><img src="images/screenshots/dia-to-sql-1.png" style="max-width:75%;"></p>
+                  <p>en esto:</p>
+                  <p class="w3-center"><img src="images/screenshots/dia-to-sql-2.png" style="max-width:75%;"></p>
+                  <p>Espero te sea de utilidad</p>
                </content>
             </widget>
 
